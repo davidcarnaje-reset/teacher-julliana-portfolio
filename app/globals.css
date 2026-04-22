@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@layer components {
+  .clay-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 35px;
+    box-shadow: 
+      20px 20px 40px rgba(0, 0, 0, 0.1), 
+      inset -10px -10px 20px rgba(0, 0, 0, 0.05), 
+      inset 10px 10px 20px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .clay-button {
+    background: #6366f1; /* Indigo color */
+    border-radius: 20px;
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1), 
+      inset -6px -6px 12px rgba(0, 0, 0, 0.2), 
+      inset 6px 6px 12px rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .clay-button:active {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.2), 
+      inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+    transform: scale(0.95);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fffbeb; /* Match sa hero bg */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8; /* Pastel Pink */
+  border-radius: 10px;
+  border: 3px solid #fffbeb;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f9a8d4;
+}
